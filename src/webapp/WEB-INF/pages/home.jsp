@@ -28,7 +28,7 @@
             <td><c:out value="${user.getName()}" /></td>
             <td><c:out value="${user.getLogin()}" /></td>
             <td><c:out value="${user.getPassword()}" /></td>
-            <td><a href="/admin/edit?id=<c:out value="${user.getId()}"/>">Update</a></td>
+            <td><a href="/admin/edit?id=${user.getId()}"/>Update</td>
             <td><a href="/admin/delete?id=<c:out value="${user.getId()}"/>">Delete</a></td>
         </tr>
     </c:forEach>

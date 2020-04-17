@@ -14,7 +14,7 @@
 <body>
 
 <%--¬®¬ß¬Ö ¬Ü¬Ñ¬Ø¬Ö¬ä¬ã¬ñ ¬Ù¬Õ¬Ö¬ã¬î ¬Ü¬Ñ¬Ü¬à¬Ö ¬ä¬à ¬ß¬Ñ¬â¬å¬ê¬Ö¬ß¬Ú¬Ö ¬Ú¬ß¬Ü¬Ñ¬á¬ã¬å¬Ý¬ñ¬è¬Ú¬Ú?????? ¬Þ¬í ¬á¬Ö¬â¬Ö¬Õ¬Ñ¬Ö¬Þ ¬Õ¬Ñ¬ß¬ß¬í¬Ö ¬Ú ¬Ó¬à¬Ù¬Þ¬à¬Ø¬ß¬à ¬Ú¬ç ¬Þ¬à¬Ô¬å¬ä ¬å¬Ó¬Ú¬Õ¬Ö¬ä¬î?--%>
-<form method="POST" action='/admin/edit?id=<c:out value="${user.getId()}"/>' modelAttribute="user">
+<form method="POST" action='/admin/edit?id=${user.id}' modelAttribute="user">
     Name : <input
         type="text" name="name"
         value="<c:out value="${user.getName()}" />" /> <br />
