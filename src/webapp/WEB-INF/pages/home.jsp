@@ -15,7 +15,6 @@
         <th>Id</th>
         <th>Name</th>
         <th>Login</th>
-        <th>Password</th>
         <th colspan=2>Action</th>
     </tr>
     </thead>
@@ -27,7 +26,6 @@
             <td><c:out value="${user.getId()}" /></td>
             <td><c:out value="${user.getName()}" /></td>
             <td><c:out value="${user.getLogin()}" /></td>
-            <td><c:out value="${user.getPassword()}" /></td>
             <td><a href="/admin/edit?id=${user.getId()}"/>Update</td>
             <td><a href="/admin/delete?id=<c:out value="${user.getId()}"/>">Delete</a></td>
         </tr>
@@ -37,5 +35,6 @@
 </table>
 
 <p><a href="/admin/add">Add User</a></p>
+<p><a href="/logout">Logout</a></p>
 </body>
 </html>

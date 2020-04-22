@@ -3,6 +3,7 @@ package web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import web.model.User;
 import web.service.UserServiсe;
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -17,6 +19,7 @@ public class MyController {
 
     @Autowired
     private UserServiсe UserServiceImpl;
+
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView listContact(ModelAndView model) {
@@ -58,5 +61,15 @@ public class MyController {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage() {
+        return "login";
+    }
+
+    @RequestMapping(value = "/userProfile", method = RequestMethod.GET)
+    public String readUserGetController(ModelMap model, HttpSession session) {
+        model.addAttribute("user", session.getAttribute("user"));
+        return "userProfile";
+    }
 
 }

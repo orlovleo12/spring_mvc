@@ -11,5 +11,5 @@ public interface UserDao {
     void updateUser(User application);
     List<User> getAllUsers();
     User getUserById(int userId);
-
+    User getUserByUsername(String username);
 }
